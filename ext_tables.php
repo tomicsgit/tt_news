@@ -178,9 +178,16 @@ if (TYPO3_MODE == 'BE')	{
             // Adds a tt_news wizard icon to the content element wizard.
     $TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_ttnews_wizicon'] = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'pi/class.tx_ttnews_wizicon.php';
 
-                // add folder icon
-    \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('pages', 'contains-news', TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'res/gfx/ext_icon_ttnews_folder.gif');
-
+	// add folder icon
+    /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+		'apps-pagetree-folder-contains-news',
+		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+		array(
+			'source' => 'EXT:tt_news/res/gfx/ext_icon_ttnews_folder.gif',
+		)
+	);
 
     // register HTML template for the tt_news BackEnd Module
     $GLOBALS['TBE_STYLES']['htmlTemplates']['mod_ttnews_admin.html'] = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('tt_news').'mod1/mod_ttnews_admin.html';
