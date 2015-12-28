@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'title' => 'News',
 	'description' => 'Website news with front page teasers and article handling inside.',
 	'category' => 'plugin',
-	'version' => '7.6.1',
+	'version' => '7.6.2',
 	'module' => 'mod1',
 	'state' => 'beta',
 	'uploadfolder' => 1,
@@ -26,7 +26,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author_company' => 'www.wmdb.de',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '7.6.0-7.6.99',
+			'typo3' => '7.6.0-8.0.99',
 		),
 		'conflicts' => array(),
 		'suggests' => array(),
