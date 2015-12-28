@@ -17,7 +17,7 @@ return array (
 			'endtime' => 'endtime',
 			'fe_group' => 'fe_group',
 		),
-// 		'prependAtCopy' => 'LLL:EXT:lang/locallang_general.php:LGL.prependAtCopy',
+// 		'prependAtCopy' => 'LLL:EXT:lang/locallang_general.xlf:LGL.prependAtCopy',
 		'hideAtCopy' => true,
 		'mainpalette' => '2,10',
 		'crdate' => 'crdate',
@@ -29,7 +29,7 @@ return array (
 	),
 	'columns' => Array (
 		'title' => Array (
-			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.title',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '40',
@@ -48,7 +48,7 @@ return array (
 		),
 		'hidden' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.hidden',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 			'config' => Array (
 				'type' => 'check',
 			)
@@ -63,9 +63,9 @@ return array (
 				'size' => 5,
 				'maxitems' => 20,
 				'items' => Array (
-					Array('LLL:EXT:lang/locallang_general.php:LGL.hide_at_login', -1),
-					Array('LLL:EXT:lang/locallang_general.php:LGL.any_login', -2),
-					Array('LLL:EXT:lang/locallang_general.php:LGL.usergroups', '--div--')
+					Array('LLL:EXT:lang/locallang_general.xlf:LGL.hide_at_login', -1),
+					Array('LLL:EXT:lang/locallang_general.xlf:LGL.any_login', -2),
+					Array('LLL:EXT:lang/locallang_general.xlf:LGL.usergroups', '--div--')
 				),
 				'exclusiveKeys' => '-1,-2',
 				'foreign_table' => 'fe_groups'
@@ -74,7 +74,7 @@ return array (
 		'starttime' => Array (
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.starttime',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -87,7 +87,7 @@ return array (
 		'endtime' => Array (
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.endtime',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -188,10 +188,10 @@ return array (
 
 	'types' => Array (
 		'0' => Array('showitem' => '
-			title;;2;;1-1-1,parent_category;;;;1-1-1,
-			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.special, image;;;;1-1-1,shortcut;;1;;1-1-1,single_pid;;;;1-1-1,description;;;;1-1-1,
-			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.access, hidden,starttime,endtime,fe_group,
-			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.extended,
+			title,--palette--;;2,parent_category,
+			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.special,image,shortcut,--palette--;;1,single_pid,description,
+			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.access,hidden,starttime,endtime,fe_group,
+			--div--;LLL:EXT:tt_news/Resources/Private/Language/locallang_tca.xml:tt_news.tabs.extended
 		'),
 
 	),
